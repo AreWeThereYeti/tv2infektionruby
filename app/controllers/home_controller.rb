@@ -8,6 +8,7 @@ class HomeController < ApplicationController
   
   def index_tv
     @data=JSON.parse(getDB)
+    render :layout => 'application_tv'
   end
   
   def index_480

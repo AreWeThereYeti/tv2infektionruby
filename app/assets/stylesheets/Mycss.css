@@ -2,6 +2,12 @@ body{
 	overflow: hidden;
 }
 
+
+.ui-widget-content {
+	border:none;
+	background:none !important;
+}
+
 html, body, #map {
 	background-color: #a9a9a9;
 	height: 98%;
@@ -62,6 +68,10 @@ html, body, #map {
 	clear: right;
 }
 
+#slidercontainer,#slider, .ui-slider-handle{
+	z-index:3000;
+}
+
 
 .markeranim{
 	z-index: 4;
@@ -76,8 +86,7 @@ html, body, #map {
 .ui-widget-content{
 	margin-top: -5px;
 	background: none;
-	border: none;
-	border-top: 2px #333333 solid;
+	border-top: 2px #333333 solid !important;
 	-moz-border-radius: 0px/*{cornerRadius}*/;
 	-webkit-borde-radius: 0px/*{cornerRadius}*/;
 	-khtml-border-radius: 0px/*{cornerRadius}*/;
