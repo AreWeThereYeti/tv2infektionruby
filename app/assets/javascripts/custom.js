@@ -1,4 +1,4 @@
-var all_data;
+//var all_data;
 var start_time;	// first recorded time 
 var end_time;		// last recorded time
 var diff;				// diff in days
@@ -23,7 +23,7 @@ $(document).ready(function() {
   window.paper.canvas.id='svg-overlay';
 	
 	console.log('got DB');
-	//all_data=window.data;
+	all_data=parseDBData(all_data);
 	
 	start_time=getStartDate();
 	end_time=getEndDate();

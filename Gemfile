@@ -19,7 +19,11 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem "httparty"
+  gem 'json'
 end
+
+#group :production do
+  
 
 gem 'jquery-rails'
 
