@@ -6,6 +6,14 @@ class HomeController < ApplicationController
     @data=JSON.parse(getDB)
   end
   
+  def index_tv
+    @data=JSON.parse(getDB)
+  end
+  
+  def index_480
+    @data=JSON.parse(getDB)
+  end
+  
   private 
   
   def getDB

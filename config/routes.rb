@@ -2,6 +2,9 @@ Tv2infektion::Application.routes.draw do
   
   root :to => "home#index"
   
+  match '/index_tv' => "home#index_tv"
+  match '/index_480' => "home#index_480"
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
