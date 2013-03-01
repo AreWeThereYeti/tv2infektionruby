@@ -92,7 +92,8 @@ function createMap(){
 		overviewMapControl: false,
 		panControl: false,
 		zoomControlOptions: {
-        style: google.maps.ZoomControlStyle.SMALL
+        style: google.maps.ZoomControlStyle.SMALL,
+ 				position: google.maps.ControlPosition.RIGHT
     }
   };
   map = new google.maps.Map(document.getElementById('map'),myOptions);

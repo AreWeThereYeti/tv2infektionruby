@@ -17,12 +17,10 @@ var marker_margin;
 var current_day=0;
 
 $(document).ready(function() {
-	console.log('document is ready');	
 	//obs!!! remember to update paper height, width on window resize!! (no need)
 	window.paper = Raphael(0,0,$(window).width(),$(window).height());
   window.paper.canvas.id='svg-overlay';
 	
-	console.log('got DB');
 	all_data=parseDBData(all_data);
 	
 	start_time=getStartDate();

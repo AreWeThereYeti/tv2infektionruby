@@ -1,14 +1,19 @@
+html, body, #map {
+	width: 100%;
+}
+
 #plotcontainer{
 	z-index: 5;
-	top: 5%;
+	top: 1%;
 	position: absolute;
 	margin-left: 10px;
 	background-color: whiteSmoke;
-	background-image: url(../img/stripe.png);
+	background-color: #f5f5f5;
+	background-color: rgba(245,245,245,0.75);
 	border-radius: 5px;
 	height: 390px;
 	width: 500px;
-	right: 1%;
+	right: 3%;
 }
 
 #plot{
@@ -26,16 +31,12 @@
 	margin-left: 9px;
 }
 
-#line-container {
-	margin-top: -245px;
-}
-
 .play, .pause {
 	width: 75px;
 	height: auto;
-	margin-right: auto;
-	margin-top: 23px;
-	margin-left: 10px;
+	position: absolute;
+	left: 10px;
+	top: 305px
 }
 
 #slider{
@@ -44,4 +45,17 @@
 	margin-right: auto;
 	width: 93%;
 	clear: right;
+}
+
+#line-container {
+position: absolute;
+top: 43px;
+left: 8px;
+}
+
+#line{
+	margin-left:0px;
+	border-left: 4px black solid;
+	height: 216px;
+	width: 1px;
 }
