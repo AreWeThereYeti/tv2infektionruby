@@ -1,35 +1,39 @@
-<div id="map"></div> 
-<div id="player">
-  <img id="play" src="img/play.png" alt="play" width="100" height="100" style="display:none;"/>
-  <img id="pause" src="img/pause.png" alt="stop" width="100" height="100" style="display:none;"/>
-</div>
-<div id ="plotcontainer">
-	<h1>Infektioner</h1>
-  	<div id="time">
-      <span>Dato:</span>
-      <span id="day-txt">2</span>
-      <span class="date-divider"> /</span>
-      <span id="month-txt">Jan</span>
-      <span class="date-divider"> - </span>
-      <span id="year-txt">2012</span>
-	</div>
-	<div id="plot"></div>
-	<span id="counter">Antal siden 1/1-12 :</span>
-	<span id="counter_val"></span>
-	<div id="line-wrapper">
-  	<div id="line-container">
-    		<div id="line"></div>
-    </div>
-  </div>
-  <input id="play_pause_btn" type="image" src="img/play.png" class="play playbutton"/>
-</div>
+<link rel="stylesheet" href="public/tv.css" />
 
-<div id="graphcontainer">
-	<div id="slidercontainer">
-		<div id="slider"></div>
+<body>
+  <div id="map"></div> 
+  <div id="player">
+    <img id="play" src="img/play.png" alt="play" width="100" height="100" style="display:none;"/>
+    <img id="pause" src="img/pause.png" alt="stop" width="100" height="100" style="display:none;"/>
   </div>
+  <div id ="plotcontainer">
+  	<h1>Infektioner</h1>
+    	<div id="time">
+        <span>Dato:</span>
+        <span id="day-txt">2</span>
+        <span class="date-divider"> /</span>
+        <span id="month-txt">Jan</span>
+        <span class="date-divider"> - </span>
+        <span id="year-txt">2012</span>
+  	</div>
+  	<div id="plot"></div>
+  	<span id="counter">Antal siden 1/1-12 :</span>
+  	<span id="counter_val"></span>
+  	<div id="line-wrapper">
+    	<div id="line-container">
+      		<div id="line"></div>
+      </div>
+    </div>
+    <input id="play_pause_btn" type="image" src="img/play.png" class="play playbutton"/>
+  </div>
+
+  <div id="graphcontainer">
+  	<div id="slidercontainer">
+  		<div id="slider"></div>
+    </div>
   
-</div>
+  </div>
+</body>
 
 <script>
   var all_data=<%= @data.to_json.html_safe %>;
