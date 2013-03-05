@@ -4,6 +4,8 @@ class HomeController < ApplicationController
   
   def index
     @data=JSON.parse(getDB)
+    puts '----------------- Data ---------------------'
+    puts @data
   end
   
   def index_tv
