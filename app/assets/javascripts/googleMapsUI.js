@@ -1,6 +1,4 @@
 function addToMap(map,data){
-	console.log('add to map ran');
-	console.log(data);
 	for(var i=0;i<data.length;i++){
 		
 		var lat=data[i][0];
@@ -12,28 +10,25 @@ function addToMap(map,data){
 		
 		//google way:
 		var latlng = new google.maps.LatLng(parseFloat(lat),parseFloat(lon));
-		console.log(latlng);
 		//top left: 58.008098,7.272949
 		//top right: 58.378679,13.337402
 		//bottom left: 54.380557,7.185059
 		//bottom right: 54.521081,15.732422
 
-		if(latlng.hb>54.380557 &&  latlng.hb<58.008098 && latlng.ib>7.185059 && latlng.ib<15.732422 ){
+		//if(latlng.hb>54.380557 &&  latlng.hb<58.008098 && latlng.ib>7.185059 && latlng.ib<15.732422 ){
 			var point=latlngToPoint(map, latlng, map.zoom);
-			console.log(point);
 			if(point){
 				var magnitude = parseFloat(data[i][2]); /* clustering of multiple incident in a time period */
 				animateGeoPoint(point,magnitude);
 			}
-		}
-		else if(latlng.ib>54.380557 &&  latlng.ib<58.008098 && latlng.jb>7.185059 && latlng.jb<15.732422 ){
-			var point=latlngToPoint(map, latlng, map.zoom);
-			console.log(point);
-			if(point){
-				var magnitude = parseFloat(data[i][2]); /* clustering of multiple incident in a time period */
-				animateGeoPoint(point,magnitude);
-			}
-		}
+		//}
+		// else if(latlng.ib>54.380557 &&  latlng.ib<58.008098 && latlng.jb>7.185059 && latlng.jb<15.732422 ){
+		// 	var point=latlngToPoint(map, latlng, map.zoom);
+		// 	if(point){
+		// 		var magnitude = parseFloat(data[i][2]); /* clustering of multiple incident in a time period */
+		// 		animateGeoPoint(point,magnitude);
+		// 	}
+		// }
 	}
 }
 
